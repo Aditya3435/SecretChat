@@ -33,7 +33,7 @@ const Register = (props) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (password !== confirmPassword) {
-      setError({ error: [{ msg: "Password does'n match" }] });
+      setError({ error: [{ message: "Password does'n match" }] });
     } else {
       registerUser({ username, password });
       setUser({
@@ -102,7 +102,7 @@ const Register = (props) => {
           {errors === null ? null : (
             <Alert
               alertType="alert-danger"
-              alertMessage={errors.error[0].msg}
+              alertMessage={errors.error[0].message}
             />
           )}
 

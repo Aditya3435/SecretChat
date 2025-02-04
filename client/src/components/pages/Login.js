@@ -5,7 +5,6 @@ import Alert from "../others/Alert";
 
 const Login = (props) => {
   const { loginUser, userAuth, errors, clearError } = useContext(AuthContext);
-
   useEffect(() => {
     if (userAuth) {
       props.history.push("/profile");
@@ -34,6 +33,7 @@ const Login = (props) => {
       username: "",
       password: "",
     });
+    console.log(errors);
   };
   return (
     <div className="d-flex align-items-center justify-content-center min-vh-100" style={{ backgroundColor: "#181718 ", color: "#ffffff" }}>
@@ -75,7 +75,7 @@ const Login = (props) => {
           {errors === null ? null : (
             <Alert
               alertType="alert-danger"
-              alertMessage={errors.error[0].msg} //.error[0].msg
+              alertMessage={errors.error[0].message} 
             />
           )}
           <div className="text-center mt-3">

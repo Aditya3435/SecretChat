@@ -31,7 +31,7 @@ const Profile = () => {
             <button
               className="btn btn-lg btn-outline-light btn-block  py-2 rounded-pill mb-3"
               onClick={async () => {
-                const profileLink = `http://secret-chat-psi.vercel.app/${user}`;
+                const profileLink = `http://secretchat-w193.onrender.com/${user}`;
                 try {
                   await navigator.clipboard.writeText(profileLink);
                   alert("Profile Link Copied To Clipboard");
